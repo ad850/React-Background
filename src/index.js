@@ -1,17 +1,41 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDom from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const first = "GOOD MORNING";
+const second = "GOOD afternoon";
+const third = "good evening";
+const four = "good night";
+var time = new Date().getHours();
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+let Greeting;
+if (time >= 5 && time <= 12) {
+    Greeting = "good morning  ☀️";
+
+}
+else if (time >= 1 && time <= 17) {
+
+    Greeting = "good afternoon 🌞 ";
+}
+else if (time >= 17 && time <= 21) {
+    Greeting = "good evening  ";
+}
+else {
+    Greeting = "good night 🌛";
+}
+
+
+ReactDom.render(<>
+
+    <div id="container" >
+
+        <div id="box">
+            <h1>Hello,{Greeting}</h1>
+        </div>
+
+
+
+    </div>
+
+</>
+    , document.getElementById("root"));
