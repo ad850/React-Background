@@ -7,7 +7,7 @@ function Time() {
     var time = new Date().getHours();
     let Greeting;
 
-    console.log(time);
+    
     if (time >= 5 && time <= 12) {
         Greeting = "good morning  ☀️";
 
